@@ -38,6 +38,33 @@ class ArvyCard extends HTMLElement {
         return this.getAttribute('apiKey');
     }
 
+    get width() {
+      return this.getWidth('apiKey');
+    }
+
+    get height() {
+      return this.getHeight('apiKey');
+    }
+
+    //show all wods from list
+    showWodList(dataset){
+      this.$containt = this._shadowRoot.querySelector('.arvy-wods');
+      dataset.workouts.forEach(wod => {
+          let wodCard = document.createElement('div');
+          wodCard.classList = "arvy-wod-card"
+          wodCard.innerHTML = `
+            <div class="arvy-wod-head">
+              <h2 class="arvy-wod-title">${wod.name}</h2>
+              <p class="arvy-wod-mode">${wod.mode}</p>
+            </div>
+          `
+          wodCard.appendChild(this.getCardBody(wod));
+
+          this.$containt.appendChild(wodCard);
+      });
+    }
+
+    //show all parameter from wod
     getCardBody(list) {
       const htmlCardBody = document.createElement('div');
       htmlCardBody.classList = 'arvy-wod-body';
@@ -60,6 +87,7 @@ class ArvyCard extends HTMLElement {
       return htmlCardBody;
     }
 
+    //show all value from parameter
     getElementContent(list){
       let htmlListContainer = document.createElement('ul');
       list.forEach(value => {
@@ -71,33 +99,17 @@ class ArvyCard extends HTMLElement {
       return htmlListContainer;
     }
       
+    //index function
     connectedCallback() {
-        let dataset = "";
-        if(!this.isLocal && this.apiKey !== null ){
-            var xmlHttp = new XMLHttpRequest();
-            const url = `http://arvy.app/api/workflow?key=${this.apiKey}`
-            xmlHttp.open("GET", url, false);
-            xmlHttp.send(null);
-            dataset = JSON.parse(xmlHttp.responseText);
-        }else{            
-            dataset = loaclDatas;
-        }
-
-        this.$containt = this._shadowRoot.querySelector('.arvy-wods');
-        dataset.workouts.forEach(wod => {
-            console.log(wod);
-            let wodCard = document.createElement('div');
-            wodCard.classList = "arvy-wod-card"
-            wodCard.innerHTML = `
-              <div class="arvy-wod-head">
-                <h2 class="arvy-wod-title">${wod.name}</h2>
-                <p class="arvy-wod-mode">${wod.mode}</p>
-              </div>
-            `
-            wodCard.appendChild(this.getCardBody(wod));
-
-            this.$containt.appendChild(wodCard);
-        });
+      if(!this.isLocal && this.apiKey !== null ){
+          var xmlHttp = new XMLHttpRequest();
+          const url = `http://arvy.app/api/workflow?key=${this.apiKey}`
+          xmlHttp.open("GET", url, false);
+          xmlHttp.send(null);
+          this.showWodList(JSON.parse(xmlHttp.responseText));
+      }else{            
+        this.showWodList(loaclDatas);
+      }
     }
   }
 

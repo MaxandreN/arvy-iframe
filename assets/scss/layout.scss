@@ -1,13 +1,14 @@
 .arvy{
-    margin: 1rem;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+    overflow: scroll;
+
     .arvy-wod-card{
         box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
         border-radius: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin: 1rem 0rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,7 +34,7 @@
             margin-left: 0.5rem;
             margin-right: 0.5rem;
         }
-        
+
         &:hover{
             transition: box-shadow 0.4s;
             box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;        
