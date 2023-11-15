@@ -1,8 +1,10 @@
 {
   "name": "arvy-iframe",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Arvy is an application dedicated to people practicing crossfit. This package allows you to display an iframe with your activities recorded on the Arvy application",
   "type": "module",
+  "main": "./dist/assets/index-8dd9309f.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,5 +13,13 @@
   "devDependencies": {
     "sass": "^1.69.5",
     "vite": "^4.4.5"
+  },
+  "bugs": {
+    "url": "https://github.com/MaxandreN/arvy-iframe",
+    "email": "maxandre.neveux.dev@gmail.com"
+  },
+  "license": {
+    "type": "ISC",
+    "url": "https://opensource.org/licenses/ISC"
   }
 }
