@@ -2,8 +2,13 @@
 
 # ARVY-iframe
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Licence-ISC-green">
+<img alt="Licence Badge" src="https://img.shields.io/badge/Licence-ISC-green">
+<img alt="Contributors Badge" src="https://img.shields.io/badge/Contributors-1-green">
 
+## Contributors
+<a href="https://github.com/MaxandreN">
+    <img alt="MaxandreN Badge" height="40" width="40" src="https://avatars.githubusercontent.com/u/66424051?v=4">
+</a>
 
 ## Install
 
@@ -21,7 +26,7 @@ import "arvy-iframe";
 ```
 
 ## Options
-isLocal : 
+isLocal :
 
 description : 
 
@@ -40,19 +45,9 @@ pathData :
 <arvy-card apiKey="myFilePath"></arvy-card>
 ```
 
-## Licences
-ISC License
+## Licences 
+This project is under the [ISC License](https://github.com/MaxandreN/arvy-iframe)
 
-Copyright (c) 2023 ARVY
+## Contributing 
 
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
+See the [specific guide](https://github.com/MaxandreN/arvy-iframe).
