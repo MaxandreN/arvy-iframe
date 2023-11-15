@@ -1,6 +1,5 @@
 {
   "name": "arvy-iframe",
-  "private": true,
   "version": "0.0.1",
   "description": "Arvy is an application dedicated to people practicing crossfit. This package allows you to display an iframe with your activities recorded on the Arvy application",
   "type": "module",

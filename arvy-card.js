@@ -38,14 +38,6 @@ class ArvyCard extends HTMLElement {
         return this.getAttribute('apiKey');
     }
 
-    get width() {
-      return this.getWidth('apiKey');
-    }
-
-    get height() {
-      return this.getHeight('apiKey');
-    }
-
     //show all wods from list
     showWodList(dataset){
       this.$containt = this._shadowRoot.querySelector('.arvy-wods');
