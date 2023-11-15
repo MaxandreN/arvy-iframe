@@ -26,28 +26,10 @@ import "arvy-iframe";
 ```
 
 ## Options
-isLocal :
-
-description : 
-
-value : true or false
-```html
-<arvy-card isLocal=true></arvy-card>
-```
-
-apiKey :
-```html
-<arvy-card apiKey="myKey"></arvy-card>
-```
-
-pathData :
-```html
-<arvy-card apiKey="myFilePath"></arvy-card>
-```
-
+The options will be available when the Arvy API is launched
 ## Licences 
-This project is under the [ISC License](https://github.com/MaxandreN/arvy-iframe)
+This project is under the [ISC License](https://github.com/MaxandreN/arvy-iframe/blob/main/LICENCE)
 
 ## Contributing 
 
-See the [specific guide](https://github.com/MaxandreN/arvy-iframe).
+See the [specific guide](https://github.com/MaxandreN/arvy-iframe/blob/main/CONTRIBUTING.md).
